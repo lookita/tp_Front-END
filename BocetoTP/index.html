@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <section class="logo">
-            <img style="width: 100px;" src="/img/logo.png" alt="">
+        <section>
+            <img class="logo" src="img/logo.png" alt="">
 
         </section>
         <section class="lorem">
             <div class="lorem1">
-                <p>lorem</p>
+                <p>Lorem</p>
             </div>
             <div class="lorem2">
-                <p>lorem</p>
+                <p>Lorem</p>
             </div>
         </section>
-    </header> 
+    </header>
     <main>
-        <div >
-            <h1 class="Bienvenidos">Bienvenidos!</h1>
-            <img class="Imagen" src="/img/imagen.png" alt="">
-        </div>
+        <section>
+            <div>
+                <h1 class="Bienvenidos">Bienvenidos!</h1>
+            </div>
+            <div>
+                <img class="Imagen" src="img/imagen.png" alt="">
+            </div>
+        </section>
         <section class="espacio-main">
             <section class="cuadro-arriba-form">
                 <div class="titulo-mascotas">
@@ -38,45 +49,52 @@
             <section id="cuadro-blanco">
                 <div class="formulario">
                     <div class="primer-bloque">
-                        <h5 style="font-size: 15px;">Mascota*</h5>
+                        <p class="mascota">Mascota*</p>
                         <form action="" method="post">
                             <label for="boton" class="bloque"></label>
-                            <div class="opciones">
-                                <div class="nombre-animales">
+                            <section class="opciones">
+                                <div class="opcion-btn">
                                     <div>
-                                        <input class="circulos" type="radio" name="opcion1"><label></label>
+                                        <input type="radio" name="Gato" class="circulos">
                                     </div>
-                                    <div >
-                                       <P>Gato</P>
+                                    <div>
+                                        <p>Gato</p>
                                     </div>
-
                                 </div>
-                                <div class="nombre-animales" >
+                                <div class="opcion-btn">
+                                    <div>
+                                        <input type="radio" name="Perro" class="circulos">
+                                    </div>
                                     <div>
                                         <p>Perro</p>
                                     </div>
-                                    <div>
-                                        <input class="circulos" type="radio" name="opcion2"><label></label>
-                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <br>
-                                <label for="edad">Edad aproximada <b style="color: #7e3e9c;">*</b></label>
+                            </section>
+                            <div style="margin-top: 35px;">
+                                <label for="edad">Edad aproximada <b>*</b></label>
                                 <input type="text">
                             </div>
                             <div>
-                                <br>
-                                <label for="Caracteristicas">Caracteristicas</label>
-                                <input style="color: black;" type="Color principal">
+                                <div style="margin-top: 25px;">
+                                    <label for="Caracteristicas">
+                                        <p>Caracteristicas</p>
+                                    </label>
+                                </div>
+                                <select class="colores" name="colores">
+                                    <option value="Color Principal" disabled selected>Color Principal</option>
+                                    <option value="rojo">Rojo</option>
+                                    <option value="verde">Verde</option>
+                                    <option value="azul">Azul</option>
+                                </select>
                                 <p class="Añadir-caracteristica">+ Añadir caracteristica</p>
+
                             </div>
                         </form>
-                    </div>    
+                    </div>
                     <div class="segundo-bloque">
                         <form action="">
-                            <div>
-                                <label for="nombre">Nombre <b style="color: #7e3e9c;">*</b></label>
+                            <div class="segundoBloque-nombre">
+                                <label for="nombre">Nombre <b>*</b></label>
                                 <input type="text">
                             </div>
                             <div class="Sexo">
@@ -89,25 +107,32 @@
                                 </div>
                             </div>
                         </form>
-                    </div>      
+                    </div>
                     <div class="tercer-bloque">
                         <form action="">
                             <div>
-                                <div>
-                                    <label for="Apodo">Apodo<b style="color: #7e3e9c;">*</b></label>
+                                <div class="tercerBloque-apodo">
+                                    <label for="Apodo">Apodo<b>*</b></label>
                                     <input type="text">
-
                                 </div>
                                 <div class="descripcion-grafica">
-                                     <label for="Descripcion grafica">Descripcion grafica<b style="color: #7e3e9c;">*</b></label>
+                                    <label for="Descripcion grafica">Descripcion grafica<b
+                                            style="color: #7e3e9c;">*</b></label>
                                     <input type="text">
                                 </div>
-                                <div class="Fotos">
-                                    <label for="foto">Subir foto:</label>
-                                    <input type="file" id="foto" name="foto" accept="image/*">
+                                <div style="margin-top: 17px;">
+                                    <label class="titulo-campo">Foto:</label>
+                                    <div class="Fotos">
+                                        <div class="division-btn-foto">
+                                            <label for="foto" class="boton-subir">Seleccionar archivo</label>
+                                            <span class="nombre-archivo">No se eligió archivo</span>
+                                            <input type="file" id="foto" name="foto" accept="image/*"
+                                                style="display: none;">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="Añadir-foto">
-                                     <p> + Añadir foto</p>
+                                    <p> + Añadir foto</p>
                                 </div>
                             </div>
                         </form>
@@ -122,7 +147,7 @@
                     </div>
                 </div>
             </section>
-        <section>
+        </section>
     </main>
     <footer>
         <section class="doble-footer">
@@ -132,19 +157,21 @@
                 </div>
                 <div class="Lorem-ipsum">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim adminim veniam, quis nostrud exerci tation ullamcorper suscipit 
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim adminim veniam, quis
+                        nostrud exerci tation ullamcorper suscipit
                     </p>
                 </div>
                 <div class="logos-footer">
                     <div class="logo-telefono">
-                        <img class="img-tel" src="/img/tel.svg" alt="">
+                        <img class="img-tel" src="img/tel.svg" alt="">
                         <div class="Telefono">
                             <p>Telefono</p>
                             <p>+54 9 11 5162 0515</p>
                         </div>
                     </div>
                     <div class="logo-mail">
-                        <img class="img-mail" src="/img/mail.svg" alt="">
+                        <img class="img-mail" src="img/mail.svg" alt="">
                         <div class="Mail">
                             <p>Mail</p>
                             <p>info@vetonline.com</p>
@@ -157,7 +184,7 @@
                 <p>Copyright © 2021. Todos los derechos reservados. Realizado por Think B</p>
             </div>
         </section>
-    </footer> 
-
+    </footer>
 </body>
+
 </html>
